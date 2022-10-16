@@ -6,9 +6,6 @@ puts all files into correct locations
 controller.bat
 controls when the main file gets ran
 
-runScript.vbs
-sends the request to run trojen.py
-
 trojen.py
 records and uploads the copy of search history
 
