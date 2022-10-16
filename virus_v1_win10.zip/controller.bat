@@ -1,0 +1,3 @@
+python trojen.py
+
+pause:
