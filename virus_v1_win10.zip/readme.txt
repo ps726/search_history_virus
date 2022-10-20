@@ -9,5 +9,5 @@ controls when the main file gets ran
 trojen.py
 records and uploads the copy of search history
 
-dns_logs.txt
+userName.txt
 created when trojen.py is ran, where search history is stored
